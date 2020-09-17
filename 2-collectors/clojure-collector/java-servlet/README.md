@@ -2,6 +2,8 @@
 
 The Java servlet component of the Clojure Collector, written in Clojure using Ring and Compojure.
 
+NOTE:  Use OpenJDK-8 and lein 2.8.3
+
 To test:
 
 ```
