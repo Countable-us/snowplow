@@ -18,11 +18,12 @@
   :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :description "A SnowPlow event collector written in Clojure. AWS Elastic Beanstalk compatible."
   :dependencies     [[org.clojure/clojure "1.9.0"]
-                     [ring/ring-core "1.6.3"]
-                     [ring/ring-devel "1.6.3"]
+                     [ring/ring-core "1.8.1"]
+                     [ring/ring-devel "1.8.1"]
                      [compojure "1.6.1"]
                      [metrics-clojure "2.10.0"]
                      [metrics-clojure-ring "2.10.0"]
+                     [joda-time "2.10.1"]
                      [commons-codec/commons-codec "1.11"]]
   ;; The jetty adapter is only used during development
   :profiles         {:dev {:dependencies [[ring/ring-jetty-adapter "1.6.3"]]}}

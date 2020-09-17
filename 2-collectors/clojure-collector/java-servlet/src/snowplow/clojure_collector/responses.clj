@@ -38,6 +38,7 @@
 
 (defn- set-cookie
   "Sets a Snowplow cookie with visitor `id`,
+   With SameSite=none, which also requires Secure,
    to last `duration` seconds for `domain` at `path`.
    If domain is nil, leave out so the FQDN
    of the host can be used instead.
@@ -45,6 +46,8 @@
   [id duration domain path]
   (merge
     {:value    id
+     :secure true
+     :same-site :none
      :expires (now-plus duration)
      :path (if (nil? path)
        "/"
